@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
 
 // TODO:  Follow these steps to enable the Ribbon (XML) item:
@@ -32,6 +33,7 @@ namespace BF_Metrics_AddIn
     public class MyRibbon : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI ribbon;
+        private bool IsEnabled = true;
 
         public MyRibbon()
         {
@@ -39,7 +41,7 @@ namespace BF_Metrics_AddIn
 
         #region IRibbonExtensibility Members
 
-        public string GetCustomUI(string ribbonID)
+        public string GetCustomUI(string RibbonID)
         {
             return GetResourceText("BF_Metrics_AddIn.MyRibbon.xml");
         }
@@ -48,6 +50,57 @@ namespace BF_Metrics_AddIn
 
         #region Ribbon Callbacks
         //Create callback methods here. For more information about adding callback methods, visit https://go.microsoft.com/fwlink/?LinkID=271226
+
+        //GetEnabled callbacks
+        public bool SetEnabled(Office.IRibbonControl control)
+        {
+            if (control == null)
+            {
+                throw new ArgumentNullException(nameof(control));
+            }
+
+            return IsEnabled;
+        }
+
+        public void ToggleButton(bool toggle)
+        {
+            IsEnabled = toggle;
+
+            ribbon.Invalidate();
+        }
+
+        //Button click callbacks
+        public void OnActionCallback(Office.IRibbonControl control)
+        {
+            try
+            {
+                switch (control.Id)
+                {
+                    case "fullReport":
+                        MessageBox.Show("You clicked " + control.Id);
+                        break;
+
+                    case "quickReport":
+                        MessageBox.Show("You clicked " + control.Id);
+                        break;
+
+                    case "saveNewFolder":
+                        MessageBox.Show("You clicked " + control.Id);
+                        break;
+
+                    case "setFolder":
+                        MessageBox.Show("You clicked " + control.Id);
+                        break;
+
+                    default:
+                        throw new ArgumentOutOfRangeException("control.Id", control.Id, String.Format("Unknown button selected. Button Id: {0}", control.Id));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         public void Ribbon_Load(Office.IRibbonUI ribbonUI)
         {
