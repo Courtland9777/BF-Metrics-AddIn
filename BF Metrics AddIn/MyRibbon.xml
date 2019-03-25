@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <ribbon>
+    <tabs>
+      <tab id="reportTab" label="BF Metrics C#" insertBeforeQ="TabFormat">
+        <group id="reportGroup" label="Reports" autoScale="true">
+          <button id="quickReport" label="Quick Report" imageMso="AppointmentColor2" onAction="OnActionCallback" visible="true" getEnabled="SetEnabled" />
+          <button id="fullReport" label="Full Report" imageMso="AppointmentColor3" onAction="OnActionCallback" enabled="true" />
+        </group>
+        <group id="othersGroup" label="Folders" autoScale="true">
+          <button id="setFolder" label="Open Folder" imageMso="AppointmentColor1" onAction="OnActionCallback" />
+          <button id="saveNewFolder" label="Save New Month" imageMso="AppointmentColor4" onAction="OnActionCallback" getEnabled="SetEnabled" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
