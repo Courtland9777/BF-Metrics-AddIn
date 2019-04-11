@@ -41,6 +41,11 @@ namespace BfMetricsAddIn
         /// <param name="dt">DataTable created from Excel workbook</param>
         public BreastFeedingData(DataTable dt)
         {
+            if (dt == null)
+            {
+                throw new ArgumentNullException(nameof(dt));
+            }
+
             this.ReadFromDataTable(dt);
         }
 
