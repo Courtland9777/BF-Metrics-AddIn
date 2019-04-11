@@ -8,7 +8,6 @@
           <button id="fullReport" label="Full Report" imageMso="AppointmentColor3" onAction="OnActionCallback" enabled="true" />
         </group>
         <group id="othersGroup" label="Folders" autoScale="true">
-          <button id="setFolder" label="Open Folder" imageMso="AppointmentColor1" onAction="OnActionCallback" />
           <button id="saveNewFolder" label="Save New Month" imageMso="AppointmentColor4" onAction="OnActionCallback" getEnabled="SetEnabled" />
         </group>
       </tab>

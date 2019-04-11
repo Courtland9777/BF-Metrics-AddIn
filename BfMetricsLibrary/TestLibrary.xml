@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:BfMetricsAddIn.CatchExceptions">
+            <summary>
+            CatchExceptions: singleton to create error message.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.CatchExceptions.Instance">
+            <summary>
+            Gets the instance of CatchExceptions
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.CatchExceptions.ShowExceptionMessage(System.Exception)">
+            <summary>
+            Shows the exception method message
+            </summary>
+            <param name="ex">Exception object</param>
+        </member>
+        <member name="T:BfMetricsAddIn.GetLastFromRange">
+            <summary>
+            GetLastFromRange: holds methods to return last row/column from an Excel range
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.Column(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            Column: returns the last column used on the first row of the worksheet.
+            </summary>
+            <param name="worksheet">The worksheet to have it's headers checked.</param>
+            <returns>The last column in the first row of worksheet.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.Row(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            Column returns the last column used on the first row of the worksheet.
+            </summary>
+            <param name="worksheet">The worksheet to have it's headers checked.</param>
+            <returns>The last row in the first column of worksheet.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.LastCellDefaultValue(System.Int32)">
+            <summary>
+            LastCellNull: Checks to make sure the int does not equal zero.
+            </summary>
+            <param name="lastCell">Last cell or row from worksheet</param>
+        </member>
+        <member name="T:BfMetricsAddIn.IButtonsaveNewFolder">
+            <summary>
+            IbuttonsaveNewFolder: Interface for saving Wb locally.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.IButtonsaveNewFolder.SaveAs">
+            <summary>
+            Starts process for getting new file saved.
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.SaveFileAs">
+            <summary>
+            SaveFileAs: saves a new month file with correct name and date.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.#ctor(Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BfMetricsAddIn.SaveFileAs"/> class.
+            </summary>
+            <param name="xlApp">Current instance of the Excel Application</param>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.BfMetricsAddIn#IButtonsaveNewFolder#SaveAs">
+            <summary>
+            SaveAs() is entry point for saving SaveFileAs class.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.GetColumnForDateString(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            GetColumnForDateString returns the last column being used in the first row of a range.
+            </summary>
+            <param name="newbornWorksheet">Worksheet named Newborns_3</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Can't find column name</exception>
+            <returns>Column number to check for date.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.CheckforHeaders(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            CheckForHeaders ensures the first row has been remove so headers are now in the top row.
+            </summary>
+            <param name="newbornWorksheet">Worksheet named Newborns_3</param>
+        </member>
+        <member name="T:BfMetricsAddIn.TStats">
+            <summary>
+            Struct that holds values for one month of statistics.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.NumberOfNewborns">
+            <summary>
+            Gets the number of newborns for the month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.OneHourFeeding">
+            <summary>
+            Gets the number of newborns fed within the first hour.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.SkinToSkin">
+            <summary>
+            Gets the number of newborns with skin to skin within the first hour.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.InitiationRate">
+            <summary>
+            Gets the number of newborns that have breast fed this month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.ExclusivityRate">
+            <summary>
+            Gets the number of newborns that have only breast fed this month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.TStats.FileDate">
+            <summary>
+            Gets the month and year associated with the data.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.TStats.Equals(System.Object)">
+            <summary>
+            Gets bool equality value.
+            </summary>
+            <param name="obj">Object to compare.</param>
+            <returns>Are values equal.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.TStats.Equals(BfMetricsAddIn.TStats)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BfMetricsAddIn.TStats.GetHashCode">
+            <summary>
+            Gets HashCode
+            </summary>
+            <returns>Zero</returns>
+        </member>
+    </members>
+</doc>

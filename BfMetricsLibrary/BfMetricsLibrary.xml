@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BfMetricsLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:BfMetricsAddIn.CatchExceptions">
+            <summary>
+            CatchExceptions: singleton to create error message.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.CatchExceptions.Instance">
+            <summary>
+            Gets the instance of CatchExceptions
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.CatchExceptions.ShowExceptionMessage(System.Exception)">
+            <summary>
+            Shows the exception method message
+            </summary>
+            <param name="ex">Exception object</param>
+        </member>
+        <member name="T:BfMetricsAddIn.DataTableCreation">
+            <summary>
+            Creates a DataTable from Excel workbook.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.DataTableCreation.CreateDataTable(System.String)">
+            <summary>
+            Create a DataTable from Excel workbook
+            </summary>
+            <param name="fileName">full path of Excel worksheet.</param>
+            <returns>DataTable from Excel workbook.</returns>
+        </member>
+        <member name="T:BfMetricsAddIn.BreastFeedingData">
+            <summary>
+            One month of breast feeding data.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.BreastFeedingData.#ctor(System.Data.DataTable)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BfMetricsAddIn.BreastFeedingData"/> class.
+            </summary>
+            <param name="dt">DataTable created from Excel workbook</param>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.NumberOfNewborns">
+            <summary>
+            Gets the number of newborns for the month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.OneHourFeeding">
+            <summary>
+            Gets the number of newborns fed within the first hour.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.SkinToSkin">
+            <summary>
+            Gets the number of newborns with skin to skin within the first hour.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.InitiationRate">
+            <summary>
+            Gets the number of newborns that have breast fed this month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.ExclusivityRate">
+            <summary>
+            Gets the number of newborns that have only breast fed this month.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.BreastFeedingData.FileDate">
+            <summary>
+            Gets the month and year associated with the data.
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.FullReport">
+            <summary>
+            Static Class for FullReport button.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.FullReport.FullReportMain(Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            Main for the FullReport.
+            </summary>
+            <param name="xlApp">Excel application</param>
+        </member>
+        <member name="T:BfMetricsAddIn.ReportWorkbook">
+            <summary>
+            Excel workbook that will hold monthly stats report.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.ReportWorkbook.#ctor(Microsoft.Office.Interop.Excel.Application,BfMetricsAddIn.BreastFeedingData[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BfMetricsAddIn.ReportWorkbook"/> class.
+            </summary>
+            <param name="xlApp">An current instance of the Excel Application.</param>
+            <param name="sorted">Array of BreastFeedingData objects sorted by date.</param>
+        </member>
+        <member name="P:BfMetricsAddIn.ReportWorkbook.Workbook">
+            <summary>
+            Gets created workbook.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.ReportWorkbook.AddData">
+            <summary>
+            Adds the data to the workbook
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.XlFileDialog">
+            <summary>
+            The file dialog box selector in Excel.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.XlFileDialog.SelectFiles">
+            <summary>
+            Debugging preselected files.
+            </summary>
+            <returns>Predefined Array for testing.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.XlFileDialog.SelectFiles(Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            User selects files to collect data from.
+            </summary>
+            <param name="xlApp">Excel Application</param>
+            <returns>Array of full file path strings.</returns>
+        </member>
+        <member name="T:BfMetricsAddIn.IsWorkbookOpen">
+            <summary>
+            Check if Workbook is open.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.IsWorkbookOpen.IsThisWorkbookOpen(System.String,Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            Is Workbook open check.
+            </summary>
+            <param name="wbook">Workbook file fullpath.</param>
+            <param name="xlApp">Current Excel application.</param>
+            <returns>If the Workbook is open or not bool.</returns>
+        </member>
+        <member name="T:BfMetricsAddIn.QuickReportNS.QuickReport">
+            <summary>
+            Static class for quickReport button
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.QuickReportNS.QuickReport.QuickReportMain(Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            Main for quick report.
+            </summary>
+            <param name="xlApp">Excel Application</param>
+        </member>
+        <member name="T:BfMetricsAddIn.QuickReportNS.QuickReportWindow">
+            <summary>
+            Form to display one month's worth of data.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.QuickReportNS.QuickReportWindow.#ctor(BfMetricsAddIn.BreastFeedingData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BfMetricsAddIn.QuickReportNS.QuickReportWindow"/> class.
+            </summary>
+            <param name="breastFeedingData">One month's worth of data</param>
+        </member>
+        <member name="F:BfMetricsAddIn.QuickReportNS.QuickReportWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.QuickReportNS.QuickReportWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BfMetricsAddIn.QuickReportNS.QuickReportWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.IButtonsaveNewFolder">
+            <summary>
+            IbuttonsaveNewFolder: Interface for saving Wb locally.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.IButtonsaveNewFolder.SaveAs">
+            <summary>
+            Starts process for getting new file saved.
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.SaveFileAs">
+            <summary>
+            SaveFileAs: saves a new month file with correct name and date.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.#ctor(Microsoft.Office.Interop.Excel.Application)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BfMetricsAddIn.SaveFileAs"/> class.
+            </summary>
+            <param name="xlApp">Current instance of the Excel Application</param>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.BfMetricsAddIn#IButtonsaveNewFolder#SaveAs">
+            <summary>
+            SaveAs() is entry point for saving SaveFileAs class.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.GetColumnForDateString(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            GetColumnForDateString returns the last column being used in the first row of a range.
+            </summary>
+            <param name="newbornWorksheet">Worksheet named Newborns_3</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Can't find column name</exception>
+            <returns>Column number to check for date.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.SaveFileAs.CheckforHeaders(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            CheckForHeaders ensures the first row has been remove so headers are now in the top row.
+            </summary>
+            <param name="newbornWorksheet">Worksheet named Newborns_3</param>
+        </member>
+        <member name="T:BfMetricsAddIn.GetLastFromRange">
+            <summary>
+            GetLastFromRange: holds methods to return last row/column from an Excel range
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.Column(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            Column: returns the last column used on the first row of the worksheet.
+            </summary>
+            <param name="worksheet">The worksheet to have it's headers checked.</param>
+            <returns>The last column in the first row of worksheet.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.Row(Microsoft.Office.Interop.Excel.Worksheet)">
+            <summary>
+            Column returns the last column used on the first row of the worksheet.
+            </summary>
+            <param name="worksheet">The worksheet to have it's headers checked.</param>
+            <returns>The last row in the first column of worksheet.</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.GetLastFromRange.LastCellDefaultValue(System.Int32)">
+            <summary>
+            LastCellNull: Checks to make sure the int does not equal zero.
+            </summary>
+            <param name="lastCell">Last cell or row from worksheet</param>
+        </member>
+    </members>
+</doc>
