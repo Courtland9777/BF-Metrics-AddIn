@@ -21,6 +21,7 @@ namespace BfMetricsAddIn
         /// <param name="xlApp">Excel application</param>
         public static void FullReportMain(Excel.Application xlApp)
         {
+            DoesFolderExist.CheckForFolder();
 #if DEBUG
             string[] pathArray = XlFileDialog.SelectFiles();
 #else

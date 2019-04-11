@@ -65,8 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatchExceptions.cs" />
     <Compile Include="DataTableCreation.cs" />
+    <Compile Include="DoesFolderExist.cs" />
     <Compile Include="FullReportClasses\BreastFeedingData.cs" />
     <Compile Include="FullReportClasses\FullReport.cs" />
     <Compile Include="FullReportClasses\ReportWorkbook.cs" />

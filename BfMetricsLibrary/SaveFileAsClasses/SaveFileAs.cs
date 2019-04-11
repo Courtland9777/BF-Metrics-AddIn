@@ -27,6 +27,7 @@ namespace BfMetricsAddIn
         public SaveFileAs(Excel.Application xlApp)
         {
             this.xlApp = xlApp;
+            DoesFolderExist.CheckForFolder();
         }
 
         /// <summary>
