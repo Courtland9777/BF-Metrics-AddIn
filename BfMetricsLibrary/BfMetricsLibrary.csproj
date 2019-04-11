@@ -71,7 +71,7 @@
     <Compile Include="FullReportClasses\FullReport.cs" />
     <Compile Include="FullReportClasses\ReportWorkbook.cs" />
     <Compile Include="FullReportClasses\XlFileDialog.cs" />
-    <Compile Include="IsWorkbookOpen.cs" />
+    <Compile Include="SaveFileAsClasses\IsWorkbookOpen.cs" />
     <Compile Include="QuickReport\QuickReport.cs" />
     <Compile Include="QuickReport\QuickReportWindow.cs">
       <SubType>Form</SubType>
@@ -81,7 +81,7 @@
     </Compile>
     <Compile Include="SaveFileAsClasses\IButtonsaveNewFolder.cs" />
     <Compile Include="SaveFileAsClasses\SaveFileAs.cs" />
-    <Compile Include="GetLastFromRange.cs" />
+    <Compile Include="SaveFileAsClasses\GetLastFromRange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

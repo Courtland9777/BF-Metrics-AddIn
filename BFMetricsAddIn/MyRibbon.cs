@@ -85,7 +85,7 @@ namespace BfMetricsAddIn
                 }
             }
 #pragma warning disable CA1031 // Do not catch general exception types
-             catch (Exception ex)
+            catch (Exception ex)
             {
                 DialogResult dialogResult = MessageBox.Show(ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
