@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BFMetricsAddIn</name>
+    </assembly>
+    <members>
+        <member name="T:BfMetricsAddIn.MyRibbon">
+            <summary>
+            Controls communication with XML
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.MyRibbon.GetCustomUI(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BfMetricsAddIn.MyRibbon.SetEnabled(Microsoft.Office.Core.IRibbonControl)">
+            <summary>
+            SetEnabled: Callback from XLM
+            </summary>
+            <param name="control">Ribbon control from XLM</param>
+            <returns>The isEnabled value</returns>
+        </member>
+        <member name="M:BfMetricsAddIn.MyRibbon.ToggleButton(System.Boolean)">
+            <summary>
+            ToggleButton: change isEnabled variable
+            </summary>
+            <param name="toggle">Is control visable.</param>
+        </member>
+        <member name="M:BfMetricsAddIn.MyRibbon.OnActionCallback(Microsoft.Office.Core.IRibbonControl)">
+            <summary>
+            OnActionCallback: callback from XML button
+            </summary>
+            <param name="control">Button control from XML</param>
+            <exception cref="T:System.ArgumentException">The control.id is not recognized.</exception>
+        </member>
+        <member name="M:BfMetricsAddIn.MyRibbon.Ribbon_Load(Microsoft.Office.Core.IRibbonUI)">
+            <summary>
+            Ribbon_Load: method called from XLM file
+            </summary>
+            <param name="ribbonUI">Called from XML file to load UI.</param>
+        </member>
+        <member name="T:BfMetricsAddIn.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BfMetricsAddIn.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:BfMetricsAddIn.ThisAddIn">
+            <summary>
+            Part of ThisAddIn available to user.
+            </summary>
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.Application_WorkbookAfterSave(Microsoft.Office.Interop.Excel.Workbook,System.Boolean)">
+            <summary>
+            Fires when a Workbook is saved
+            </summary>
+            <param name="wb">Workbook that was saved.</param>
+            <param name="isSaved">Was the save successful?</param>
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.Application_ActiveWorkbookChanges(Microsoft.Office.Interop.Excel.Workbook)">
+            <summary>
+            Check for Newborn_3 worksheet
+            </summary>
+            <param name="wb">Workbook reference provided by event handler</param>
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.CreateRibbonExtensibilityObject">
+            <inheritdoc/>
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InternalStartup">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.#ctor(Microsoft.Office.Tools.Excel.ApplicationFactory,System.IServiceProvider)">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.Initialize">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.FinishInitialization">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InitializeDataBindings">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InitializeCachedData">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InitializeData">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.BindToData">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.StartCaching(System.String)">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.StopCaching(System.String)">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.IsCached(System.String)">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.BeginInitialization">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.EndInitialization">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InitializeControls">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.InitializeComponents">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.NeedsFill(System.String)">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisAddIn.OnShutdown">
+            
+        </member>
+        <member name="T:BfMetricsAddIn.Globals">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.Globals.#ctor">
+            
+        </member>
+        <member name="T:BfMetricsAddIn.ThisRibbonCollection">
+            
+        </member>
+        <member name="M:BfMetricsAddIn.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+            
+        </member>
+    </members>
+</doc>
