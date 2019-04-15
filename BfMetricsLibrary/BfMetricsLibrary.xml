@@ -4,22 +4,6 @@
         <name>BfMetricsLibrary</name>
     </assembly>
     <members>
-        <member name="T:BfMetricsAddIn.CatchExceptions">
-            <summary>
-            CatchExceptions: singleton to create error message.
-            </summary>
-        </member>
-        <member name="P:BfMetricsAddIn.CatchExceptions.Instance">
-            <summary>
-            Gets the instance of CatchExceptions
-            </summary>
-        </member>
-        <member name="M:BfMetricsAddIn.CatchExceptions.ShowExceptionMessage(System.Exception)">
-            <summary>
-            Shows the exception method message
-            </summary>
-            <param name="ex">Exception object</param>
-        </member>
         <member name="T:BfMetricsAddIn.DataTableCreation">
             <summary>
             Creates a DataTable from Excel workbook.
@@ -31,6 +15,16 @@
             </summary>
             <param name="fileName">full path of Excel worksheet.</param>
             <returns>DataTable from Excel workbook.</returns>
+        </member>
+        <member name="T:BfMetricsAddIn.DoesFolderExist">
+            <summary>
+            Check if required folders exist
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.DoesFolderExist.CheckForFolder">
+            <summary>
+            Check to see if the required folders Exist.
+            </summary>
         </member>
         <member name="T:BfMetricsAddIn.BreastFeedingData">
             <summary>
