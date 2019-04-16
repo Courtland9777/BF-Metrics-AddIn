@@ -117,7 +117,6 @@
     <AdditionalFiles Include="..\stylecop.json">
       <Link>stylecop.json</Link>
     </AdditionalFiles>
-    <None Include="BF Metrics AddIn.ruleset" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
