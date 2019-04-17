@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Office = Microsoft.Office.Core;
+using BfMetricsAddIn.ErrorHandlingHelper;
 
 namespace BfMetricsAddIn
 {
@@ -87,7 +88,7 @@ namespace BfMetricsAddIn
 #pragma warning disable CA1031 // Do not catch general exception types
             catch (Exception ex)
             {
-                DialogResult dialogResult = MessageBox.Show(ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ErrorHandler.DisplayMessage(ex);
             }
 #pragma warning restore CA1031 // Do not catch general exception types
         }
