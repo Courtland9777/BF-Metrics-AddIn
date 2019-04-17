@@ -26,6 +26,17 @@
             Check to see if the required folders Exist.
             </summary>
         </member>
+        <member name="T:BfMetricsAddIn.ErrorHandlingHelper.ErrorHandler">
+            <summary>
+            Error Handling is managed from this Class
+            </summary>
+        </member>
+        <member name="M:BfMetricsAddIn.ErrorHandlingHelper.ErrorHandler.DisplayMessage(System.Exception)">
+            <summary>
+            Create a message describing error to user
+            </summary>
+            <param name="ex">Error object</param>
+        </member>
         <member name="T:BfMetricsAddIn.BreastFeedingData">
             <summary>
             One month of breast feeding data.
