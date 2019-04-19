@@ -11,8 +11,12 @@
       "companyName": "Courtland9777"
     },
     "orderingRules": {
-      "usingDirectivesPlacement": "outsideNamespace\n"
+      "usingDirectivesPlacement": "outsideNamespace"
+    },
+    "layoutRules": {
+      "newlineAtEndOfFile": "allow"
     }
   }
 }
+
 
